@@ -7,7 +7,7 @@ const saltRounds = 10;
 const userSchema = mongoose.Schema({
   name: {
     type: String,
-    maxlength: 50,
+    maxlength: 500,
   },
   email: {
     type: String,
@@ -20,7 +20,7 @@ const userSchema = mongoose.Schema({
   },
   lastname: {
     type: String,
-    maxlength: 50,
+    maxlength: 500,
   },
   role: {
     type: Number,

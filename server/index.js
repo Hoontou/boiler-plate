@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
-app.post('/api/register', (req, res) => {
+app.post('/api/users/register', (req, res) => {
   console.log(req.body);
   const user = new User(req.body);
 
@@ -37,7 +37,7 @@ app.post('/api/register', (req, res) => {
   });
 }); //사인 인
 
-app.post('/api/login', (req, res) => {
+app.post('/api/users/login', (req, res) => {
   User.findOne({ email: req.body.email }, (err, user) => {
     if (!user) {
       return res.json({
