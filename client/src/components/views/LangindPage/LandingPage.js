@@ -24,6 +24,7 @@ function LandingPage() {
         height: '100vh',
       }}
     >
+      <h1>시작페이지</h1>
       <button onClick={onClickHandler}>로그아웃</button>
     </div>
   );

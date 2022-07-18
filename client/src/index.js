@@ -13,7 +13,7 @@ const createStoreWithMiddleware = applyMiddleware(
   promiseMiddleware,
   ReduxThunk
 )(createStore);
-
+// 리덕스 크롬 익스텐션 사용을 위해 아래 코드작성
 ReactDOM.render(
   <Provider
     store={createStoreWithMiddleware(
