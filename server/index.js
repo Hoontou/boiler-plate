@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const port = 5000;
 const cookieParser = require('cookie-parser');
+const morgan = require('morgan');
 
 const { auth } = require('./middleware/auth');
 const { User } = require('./models/User');
@@ -11,6 +12,7 @@ const config = require('./config/key');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
+app.use(morgan('dev'));
 
 const mongoose = require('mongoose');
 mongoose
